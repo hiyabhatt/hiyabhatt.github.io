@@ -1,0 +1,286 @@
+/* ==============================
+   Tokens & Base
+============================== */
+:root{
+  --accent-700:#1d4ed8;
+  --accent-600:#2563eb;
+  --accent-500:#3b82f6;
+  --accent-50:#eef2ff;
+
+  --purple-600:#7c3aed;
+
+  --bg:#f7f8fb;
+  --panel:#ffffff;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --line:#e7ebf0;
+
+  --radius:14px;
+  --shadow:0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.06);
+
+  --s1:6px; --s2:10px; --s3:14px; --s4:18px; --s5:24px; --s6:32px; --s7:40px;
+
+  /* timeline year column */
+  --year-col: 220px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, Helvetica, Arial;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+}
+
+a{color:var(--accent-600); text-decoration:none; font-weight:600;}
+a:hover{text-decoration:underline;}
+
+/* ==============================
+   Shell layout
+============================== */
+.App{
+  display:grid; grid-template-columns:300px minmax(0,1fr);
+  gap:var(--s6); max-width:1080px; margin:0 auto; padding:var(--s6) var(--s5);
+}
+
+/* ==============================
+   Sidebar
+============================== */
+.sidebar{
+  position:sticky; top:var(--s6); align-self:start;
+  background:var(--panel); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:var(--s6) var(--s5);
+}
+.profile{text-align:center;}
+.profile-img{
+  width:120px;height:120px;border-radius:999px;object-fit:cover;display:block;margin:0 auto var(--s3);
+  box-shadow:0 6px 20px rgba(0,0,0,.06);
+}
+.profile-name{margin:0; font-weight:800; letter-spacing:-.2px; font-size:1.35rem;}
+.profile-role{margin:6px 0 2px; color:var(--ink); font-size:.95rem;}
+.profile-affiliation{margin:0 0 var(--s4); color:var(--muted); font-size:.93rem;}
+
+.social-icons{display:flex;justify-content:center;gap:12px;margin:var(--s2) 0 var(--s4);}
+.social-icons a{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:40px;height:40px;border-radius:12px;color:var(--accent-600);
+  background:var(--accent-50); border:1px solid #e6eafe;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.social-icons a:hover{transform:translateY(-2px); background:#e9edff; box-shadow:0 6px 16px rgba(37,99,235,.15);}
+.social-icons svg{width:20px;height:20px;}
+.social-icon-img{width:20px;height:20px;display:block;}
+
+.navbar{margin-top:var(--s5); padding-top:var(--s4); border-top:1px solid var(--line);}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+.nav-link{display:block;padding:10px 12px;border-radius:10px;color:var(--muted);font-weight:600;}
+.nav-link:hover{background:#f4f6ff;color:var(--accent-600);}
+
+/* ==============================
+   Main Cards
+============================== */
+.main-content{min-width:0;}
+.section-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:var(--s6); margin-bottom:var(--s6);
+}
+.section-card h2{
+  margin:0 0 var(--s4);
+  font-weight:900; letter-spacing:-.3px;
+  font-size: clamp(1.2rem, 1.05rem + .6vw, 1.6rem);
+  background:linear-gradient(90deg,var(--accent-700),var(--accent-500));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.section-card p{margin:12px 0;}
+.section-card ul{padding-left:18px;margin:0;}
+.section-card li{margin:8px 0;}
+
+/* ==============================
+   Education – precise timeline
+============================== */
+.timeline{position:relative;list-style:none;margin:0;padding:0;}
+.timeline::before{
+  content:""; position:absolute; top:0; bottom:0; left:calc(var(--year-col) + 10px);
+  width:2px; background:var(--line);
+}
+.timeline-item{
+  position:relative; display:grid; grid-template-columns:var(--year-col) 1fr; column-gap:24px; padding:18px 0 26px;
+}
+.timeline-item::before{
+  content:""; position:absolute; left:calc(var(--year-col) + 5px); top:2.05em;
+  width:12px;height:12px;border-radius:999px;background:var(--accent-600); box-shadow:0 0 0 3px #eef2ff;
+}
+.timeline-year{
+  grid-column:1/2; text-align:right; padding-right:24px; color:var(--muted);
+  font-weight:700; font-size:.95rem; line-height:1.35; white-space:nowrap;
+}
+.timeline-body{grid-column:2/3; min-width:0;}
+.timeline-title{font-weight:800; letter-spacing:-.2px; font-size:1.05rem;}
+.timeline-meta{color:#6b7280; font-size:.95rem;}
+
+/* ==============================
+   Projects – editorial feature cards
+============================== */
+.feature{
+  display:grid; grid-template-columns:10px 1fr; gap:20px;
+  padding:var(--s5) var(--s5); border:1px solid var(--line); border-radius:16px; background:#fff;
+  box-shadow:var(--shadow);
+}
+.feature + .feature{margin-top:var(--s5);}
+.feature_bar{
+  border-radius:999px; background:linear-gradient(180deg,var(--accent-600),var(--accent-500));
+}
+.feature_bar.purple{
+  background: linear-gradient(180deg, var(--purple-600), #9a6bff);
+}
+.feature_body{min-width:0;}
+.feature_head{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:6px;}
+.feature_title{margin:0; font-weight:900; letter-spacing:-.2px; font-size:clamp(1.05rem,1rem + .35vw,1.25rem); color:var(--ink);}
+.feature_tags{display:inline-flex; gap:8px; align-items:center;}
+.tag{
+  display:inline-flex; align-items:center; height:26px; padding:0 10px;
+  border-radius:999px; font-size:.78rem; font-weight:700;
+  color:var(--accent-600); background:var(--accent-50); border:1px solid #e6eafe;
+}
+.feature_meta{list-style:none; padding:0; margin:var(--s3) 0 0; color:var(--muted);}
+.feature_meta li + li{margin-top:6px;}
+
+.feature_actions{margin-top:var(--s4); display:flex; gap:10px; flex-wrap:wrap;}
+.btn{
+  display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px;
+  background:linear-gradient(90deg,var(--accent-600),var(--accent-500)); color:#fff; font-weight:800; text-decoration:none;
+  box-shadow:0 10px 22px rgba(37,99,235,.18); transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-1px); box-shadow:0 14px 28px rgba(37,99,235,.22);}
+.btn.ghost{background:transparent; color:var(--accent-600); border:1px solid #dbe5ff; box-shadow:none;}
+.btn.ghost:hover{background:var(--accent-50);}
+
+/* pull-quote */
+.quote{
+  margin:12px 0; padding:14px 16px; border-left:3px solid #dfe6ff; background:#f6f8ff;
+  color:#1f2937; border-radius:10px; font-style:italic;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer{text-align:center; color:#8a94a7; font-size:.9rem; margin-top:var(--s5);}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 960px){
+  .App{grid-template-columns:1fr; max-width:720px; padding:var(--s5) var(--s4); gap:var(--s5);}
+  .sidebar{position:static; top:auto; padding:var(--s5);}
+  .section-card{padding:var(--s5);}
+  :root{ --year-col: 0px; }
+  .timeline::before{left:16px;}
+  .timeline-item{display:block; padding-left:32px;}
+  .timeline-item::before{left:10px; top:.95em;}
+  .timeline-year{text-align:left; margin-bottom:6px;}
+}
+
+@media (max-width: 540px){
+  .section-card{padding:var(--s4); border-radius:12px;}
+  .profile-img{width:108px;height:108px;}
+  .social-icons a{width:38px;height:38px;}
+  .feature{padding:var(--s4);}
+}
+
+/* ───────────────── Publications Section ───────────────── */
+#publications ul {
+  list-style-type: none; /* Removes the default bullet points */
+  padding-left: 0;
+}
+
+#publications li {
+  margin-bottom: 1rem; /* Adds space between each publication entry */
+  line-height: 1.6;
+}
+
+/* Style for the publication links */
+#publications a {
+  color: #333; /* Sets the default link color to a dark gray/black */
+  text-decoration: none; /* Removes the underline by default */
+  transition: color 0.2s ease-in-out; /* Adds a smooth color transition on hover */
+}
+
+/* Style for the publication links on hover */
+#publications a:hover {
+  color: #0056b3; /* Changes the link color to a professional blue on hover */
+  text-decoration: underline; /* Adds an underline on hover for clarity */
+}
+
+
+/* ───────────────── News & Updates Section ───────────────── */
+.news-scroll-container {
+  max-height: 350px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s2) var(--s4);
+  background: var(--bg);
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news-item {
+  display: flex;
+  align-items: baseline; /* This is the fix */
+  gap: var(--s4);
+  padding: var(--s3) 0;
+}
+
+.news-item + .news-item {
+  border-top: 2px solid var(--line);
+}
+
+.news-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  width: 80px; /* Use a fixed width for perfect alignment */
+  flex-shrink: 0;
+  margin-right: var(--s4);
+  text-transform: uppercase;
+  text-align: right; /* Keep text aligned to the right */
+}
+
+.news-content {
+  flex-grow: 1; /* Allow the content to fill the remaining space */
+}
+
+.news-title {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.news-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 4px; /* Add a little space above the link */
+  color: var(--accent-600);
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
+.news-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.news-scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.news-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 10px;
+}
+.news-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db; /* A slightly darker shade for hover */
+}
