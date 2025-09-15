@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Hiya_Bhatt/static/css/main.9d33f299.css",
-    "main.js": "/Hiya_Bhatt/static/js/main.5f84848b.js",
+    "main.js": "/Hiya_Bhatt/static/js/main.4224d95c.js",
     "static/media/profile.jpg": "/Hiya_Bhatt/static/media/profile.0f42be6ad8658644c5d3.jpg",
     "index.html": "/Hiya_Bhatt/index.html",
     "static/media/Google_Scholar_logo.svg": "/Hiya_Bhatt/static/media/Google_Scholar_logo.40e3b4f719a57a3d034b854054a25c66.svg",
     "main.9d33f299.css.map": "/Hiya_Bhatt/static/css/main.9d33f299.css.map",
-    "main.5f84848b.js.map": "/Hiya_Bhatt/static/js/main.5f84848b.js.map"
+    "main.4224d95c.js.map": "/Hiya_Bhatt/static/js/main.4224d95c.js.map"
   },
   "entrypoints": [
     "static/css/main.9d33f299.css",
-    "static/js/main.5f84848b.js"
+    "static/js/main.4224d95c.js"
   ]
 }
