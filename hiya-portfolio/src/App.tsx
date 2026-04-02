@@ -12,7 +12,7 @@ function App() {
           <img src="/profile.jpg" alt="Portrait of Hiya Bhatt" className="profile-img" />
           <h1 className="profile-name">Hiya Bhatt</h1>
           <p className="profile-role">Researcher in Sustainable MLOps & Self-Adaptive Systems</p>
-          <p className="profile-affiliation">MS by Research, IIIT-Hyderabad</p>
+          <p className="profile-affiliation">PhD @ VU Amsterdam</p>
 
           <div className="social-icons">
             <a href="mailto:hiyabhatt2002@gmail.com" aria-label="Email">
@@ -71,24 +71,31 @@ function App() {
         <section id="education" className="section-card">
           <h2>Education</h2>
           <ul className="timeline">
-            <li className="timeline-item">
-              <span className="timeline-year">2024 – present<br />(expected 2026)</span>
+          <li className="timeline-item">
+              <span className="timeline-year">2026 – present</span>
               <div className="timeline-body">
-                <div className="timeline-title">MS by Research, <strong>International Institute of Information Technology – Hyderabad</strong></div>
+                <div className="timeline-title">PhD, <strong>Vrije Universiteit Amsterdam, Netherlands</strong></div>
+                {/* <div className="timeline-meta">(CGPA: 9)</div> */}
+              </div>
+            </li>
+            <li className="timeline-item">
+              <span className="timeline-year">2024 – 2026</span>
+              <div className="timeline-body">
+                <div className="timeline-title">MS by Research, <strong>International Institute of Information Technology – Hyderabad, India</strong></div>
                 <div className="timeline-meta">(CGPA: 9)</div>
               </div>
             </li>
             <li className="timeline-item">
               <span className="timeline-year">2020 – 2024</span>
               <div className="timeline-body">
-                <div className="timeline-title">BTech (CSE), <strong>Manipal University Jaipur</strong></div>
+                <div className="timeline-title">BTech (CSE), <strong>Manipal University Jaipur, India</strong></div>
                 <div className="timeline-meta">(CGPA: 9.34)</div>
               </div>
             </li>
             <li className="timeline-item">
               <span className="timeline-year">2020</span>
               <div className="timeline-body">
-                <div className="timeline-title">Class 12th (CBSE), <strong>Bhartiya Vidya Bhavans, Vadodara</strong></div>
+                <div className="timeline-title">Class 12th (CBSE), <strong>Bhartiya Vidya Bhavans, Vadodara, India</strong></div>
                 <div className="timeline-meta">(90.2%)</div>
               </div>
             </li>
@@ -107,24 +114,38 @@ function App() {
           <h2>Publications</h2>
           <ul>
             <li>
+              <a href="https://arxiv.org/abs/2601.06456" target="_blank" rel="noopener noreferrer">
+                Shaunak Biswas, <strong>Hiya Bhatt</strong>, Karthik Vaidhyanathan.
+                “Architecting AgentOps Needs CHANGE.”
+                <em> CAIN, 2026.</em>
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2601.11926" target="_blank" rel="noopener noreferrer">
+                Ananya Halgatti, Shaunak Biswas, <strong>Hiya Bhatt</strong>, Srinivasan Rakhunathan, Karthik Vaidhyanathan.
+                “Harmonica: A Self-Adaptation Exemplar for Sustainable MLOps.”
+                <em> SEAMS, 2026.</em>
+              </a>
+            </li>
+            <li>
               <a href="https://scholar.google.com/scholar?oi=bibs&cluster=14666453886330260413&btnI=1&hl=en" target="_blank" rel="noopener noreferrer">
                 <strong>Hiya Bhatt</strong>, Shaunak Biswas, Srinivasan Rakhunathan, Karthik Vaidhyanathan.
                 “HarmonE: A Self-Adaptive Approach to Architecting Sustainable MLOps.”
-                <em> To appear in ECSA 2025.</em>
+                <em> European Conference on Software Architecture (ECSA), 2025.</em>
               </a>
             </li>
             <li>
               <a href="https://scholar.google.com/scholar?oi=bibs&cluster=168146282669498968&btnI=1&hl=en" target="_blank" rel="noopener noreferrer">
                 <strong>Hiya Bhatt</strong>, Karthik Vaidhyanathan, Rahul Biju, Deepak Gangadharan, Ramona Trestian, Purav Shah.
                 “Architecting Digital Twins for Intelligent Transportation Systems.”
-                <em> ICSA Workshops, 2025.</em>
+                <em> IEEE 22nd International Conference on Software Architecture Companion (ICSA-C), 2025.</em>
               </a>
             </li>
             <li>
               <a href="https://scholar.google.com/scholar?oi=bibs&cluster=15389033656183515278&btnI=1&hl=en" target="_blank" rel="noopener noreferrer">
                 <strong>Hiya Bhatt</strong>, Shrikara Arun, Adyansh Kakran, Karthik Vaidhyanathan.
                 “Towards Architecting Sustainable MLOps: A Self-Adaptation Approach.”
-                <em> ICSA Companion (ICSA-C), 2024.</em>
+                <em> IEEE 21st International Conference on Software Architecture Companion (ICSA-C), 2024.</em>
               </a>
             </li>
           </ul>
