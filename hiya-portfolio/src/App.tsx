@@ -49,20 +49,42 @@ function App() {
       <main className="main-content">
         {/* <!-- About --> */}
         <section id="about" className="section-card">
-        <h2>About Me</h2>
-        <p>
-          Hi! I am <strong>Hiya Bhatt</strong>, a Master's by Research student at the <a href="https://www.iiit.ac.in/" target="_blank" rel="noopener noreferrer">International Institute of Information Technology, Hyderabad (IIIT Hyderabad)</a>. My work is conducted at the <a href="https://serc.iiit.ac.in/" target="_blank" rel="noopener noreferrer">Software Engineering Research Center (SERC)</a> under the mentorship of <a href="https://karthikvaidhyanathan.com/" target="_blank" rel="noopener noreferrer">Dr. Karthik Vaidhyanathan</a>.
-        </p>
-        <p>
-        My current research focuses on building <strong>sustainable self-adaptive machine learning-enabled systems</strong> that can efficiently manage changing environments and resource constraints. This includes exploring <strong>energy-aware MLOps frameworks</strong> and integrating these systems with <strong>digital twins</strong> to enhance real-time monitoring, analysis, and decision-making in dynamic scenarios.
-        </p>
-        <p>
-          This specialization is a direct continuation of the work I began as a research intern at SERC during my undergraduate studies. That foundational experience inspired me to pursue a Master's degree to deepen my expertise in building robust and intelligent software.
-        </p>
-        <p>
-          Outside of my academic work, I enjoy singing.
-        </p>
-      </section>
+  <h2>About Me</h2>
+  <p>
+    Hi! I am <strong>Hiya Bhatt</strong>, a PhD student at the{" "}
+    <a href="https://vu.nl/en" target="_blank" rel="noopener noreferrer">
+      Vrije Universiteit Amsterdam
+    </a>, where I am part of the{" "}
+    <a href="https://s2group.cs.vu.nl/" target="_blank" rel="noopener noreferrer">
+      Software and Sustainability (S2) Group
+    </a>. I am co-supervised by Justus Bogner, Patricia Lago, and Markus Funke.
+  </p>
+
+  <p>
+    My research focuses on designing <strong>reusable green architectural tactics for modern ML-enabled systems</strong>, particularly for emerging paradigms such as <strong>LLM-based applications, RAG pipelines, and agent-based systems</strong>. I am interested in making these tactics more structured and actionable, enabling better decision-making around design choices, trade-offs, and technique selection in complex ML systems.
+  </p>
+
+  <p>
+    Before starting my PhD, I completed my Master’s by Research in Computer Science and Engineering from{" "}
+    <a href="https://www.iiit.ac.in/" target="_blank" rel="noopener noreferrer">
+      IIIT Hyderabad
+    </a>, where I was part of the{" "}
+    <a href="https://serc.iiit.ac.in/" target="_blank" rel="noopener noreferrer">
+      Software Engineering Research Center (SERC)
+    </a> under the mentorship of{" "}
+    <a href="https://karthikvaidhyanathan.com/" target="_blank" rel="noopener noreferrer">
+      Dr. Karthik Vaidhyanathan
+    </a>.
+  </p>
+
+  <p>
+    My work has largely revolved around building machine learning-enabled systems that remain useful as the world around them changes. I am particularly interested in designing adaptive and efficient ML systems that are mindful of their environmental impact.
+  </p>
+
+  <p>
+    Outside of my academic work, I enjoy singing.
+  </p>
+</section>
 
 
         
