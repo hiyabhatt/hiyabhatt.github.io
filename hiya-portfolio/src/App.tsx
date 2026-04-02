@@ -241,10 +241,38 @@ function App() {
     <h2>News & Updates</h2>
     <div className="news-scroll-container">
       <ul className="news-list">
-         <li className="news-item">
+        <li className="news-item">
+          <span className="news-date">April 2026</span>
+          <div className="news-content">
+            <p className="news-title">Started my PhD journey at VU Amsterdam!</p>
+          </div>
+        </li> 
+        <li className="news-item">
+          <span className="news-date">March 2026</span>
+          <div className="news-content">
+            <p className="news-title">🎓 Defended my Thesis - Architecting Sustainable MLOps using Self-Adaptation 🎓</p>
+             <a href="https://www.linkedin.com/feed/update/urn:li:activity:7440908871101042688/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADAhpZYB7-Nw-iB1p52YLh32eF4BwSx5Ccw" className="news-link" target="_blank" rel="noopener noreferrer">Read More</a>
+          </div>
+        </li> 
+        <li className="news-item">
+          <span className="news-date">Jan 2026</span>
+          <div className="news-content">
+            <p className="news-title">🎉 Our paper got accepted in SEAMS 2026!</p>
+             <a href="https://www.linkedin.com/posts/karthikv1392_sustaind-greenai-seams2026-ugcPost-7426256098195828738-gKz2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADAhpZYB7-Nw-iB1p52YLh32eF4BwSx5Ccw" className="news-link" target="_blank" rel="noopener noreferrer">Read More</a>
+          </div>
+        </li> 
+        <li className="news-item">
+          <span className="news-date">Jan 2026</span>
+          <div className="news-content">
+            <p className="news-title">🎉 Our paper got accepted in CAIN 2026!</p>
+             <a href="https://www.linkedin.com/posts/karthikv1392_cain2026-sa4s-serc-ugcPost-7417749499089059840-ULP9?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADAhpZYB7-Nw-iB1p52YLh32eF4BwSx5Ccw" className="news-link" target="_blank" rel="noopener noreferrer">Read More</a>
+          </div>
+        </li> 
+        <li className="news-item">
           <span className="news-date">Sep 2025</span>
           <div className="news-content">
             <p className="news-title">Heading to Cyprus to present "HarmonE" at ECSA 2025! 🇨🇾</p>
+            <a href="https://www.linkedin.com/posts/hiya-bhatt-a465251a6_ecsa2025-mlops-selfadaptation-activity-7375097457699037184-fQyr?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADAhpZYB7-Nw-iB1p52YLh32eF4BwSx5Ccw" className="news-link" target="_blank" rel="noopener noreferrer">Read More</a>
           </div>
         </li>
          <li className="news-item">
